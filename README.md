@@ -99,7 +99,7 @@ we would likely be fetching this info).
 const [movies, setMovies] = useState([
   { id: 1, title: "A River Runs Through It" },
   { id: 2, title: "Se7en" },
-  { id: 3, title: "Inception" }
+  { id: 3, title: "Inception" },
 ]);
 ```
 
@@ -332,7 +332,7 @@ function MovieShow({ movies }) {
   const params = useParams();
   console.log(params);
 
-  const movie = movies.find(movie => movie.id === parseInt(params.movieId))
+  const movie = movies.find((movie) => movie.id === parseInt(params.movieId));
 
   return (
     <div>
@@ -463,7 +463,6 @@ abstract components that fill in the data for each 'page' on demand. Very cool!
 - [useRouteMatch][use-route-match]
 - [useParams][use-params]
 
-[object destructuring]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+[object destructuring]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 [use-route-match]: https://v5.reactrouter.com/web/api/Hooks/useroutematch
 [use-params]: https://v5.reactrouter.com/web/api/Hooks/useparams
